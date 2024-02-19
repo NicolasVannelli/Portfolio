@@ -1,0 +1,89 @@
+---
+import Bootstrap from "../icons/Bootstrap.astro";
+import SASS from "../icons/SASS.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import React from "../icons/React.astro";
+import GitHub from "../icons/GitHub.astro";
+
+const TAGS = {
+    Bootstrap: {
+        icon: Bootstrap,
+    },
+    HTML: {
+        icon: HTML,
+    },
+    SASS: {
+        icon: SASS,
+    },
+    CSS: {
+        icon: CSS,
+    },
+    React: {
+        icon: React,
+    },
+    JavaScript: {
+        icon: JavaScript,
+    },
+};
+
+const PROYECTOS = [
+    {
+        title: "Página de Yone",
+        description:
+            "Este es mi primer proyecto, el cual fue introductorio al desarrollo Web, donde enfrenté retos como el utilizar frameworks y también el CSS puro, es un sitio completamente responsive y donde busqué darle la mejor experiencia al usuario.",
+        link: "https://yonepage.netlify.app/",
+        github: "https://github.com/NicolasVannelli/PaginaYone",
+        image: "../public/pagina1.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.Bootstrap],
+    },
+    {
+        title: "Patient Data",
+        description:
+            "Proyecto en el cual puse a prueba mis habilidades con JavaScript,donde tuve el reto de manipular DOM, utilizar API,asincronias,librerias y eventos",
+        link: "https://patientsdata.netlify.app/",
+        github: "https://github.com/NicolasVannelli/PatientData",
+        image: "../public/pagina2.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+    },
+    {
+        title: "E-commerce",
+        description:
+            "E-commerce donde utilicé React, enfrentandome a reto como aprender un framework nuevo, utilizando hooks, consumir API, conectar a una base de datos para llevar y traer información para lograr que sea totalmente funcional",
+        link: "https://yonepage.netlify.app/",
+        github: "https://github.com/NicolasVannelli/Tiendita",
+        image: "../public/pagina3.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.React],
+    },
+    {
+        title: "Gimnasio",
+        description:
+            "Página donde busqué profundizar mis conocimientos con HTML para una mejor semántica, puliendo de dicha manera el SEO, aplicar mejores estilos con CSS, mas interactividad con JavaScript y conectar el formulario de contacto a una base de datos.",
+        link: "https://aquamarine-sfogliatella-fe1b65.netlify.app/",
+        github: "https://github.com/NicolasVannelli/PaginaYone",
+        image: "../public/pagina4.webp",
+        tags: [TAGS.HTML, TAGS.CSS,TAGS.JavaScript],
+    },
+];
+---
+
+{
+    PROYECTOS.map(({ title, description, tags, image, link, github }) => (
+        <article class="p-1 m-5 border border-slate-300 hover:border-indigo-300">
+            <a href={link} target="_blank"><img class="transition-transform duration-1000 hover:scale-105" src={image} alt="Captura de pantalla de mi proyecto" /></a>
+            <h3 class="text-2xl font-semibold mb-2 border-2 border-b-slate-500">
+                {title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <a href={github} target="_blank"><GitHub class="size-10 pb-2"/></a>
+            <ul class="flex gap-x-4 flex-row">
+                {tags.map((tag) => (
+                    <li class="flex gap-x-2 rounded-full text-xs p-1">
+                            <tag.icon class="size-10" />
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}

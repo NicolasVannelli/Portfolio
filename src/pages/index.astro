@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import GitHub from "../icons/GitHub.astro";
+import Sobremi from "../icons/Sobremi.astro";
+import Mail from "../icons/Mail.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Code from "../icons/Code.astro";
+import RRSS from "../components/RRSS.astro";
+import SectionContainer from "../components/Section.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Portfolio de Nicolás, Desarrollador y Programador Web" description="Especializado en crear aplicaciones web">
+	<main>
+		<SectionContainer>
+			<img class="rounded-full size-14" src="../../fotomia.webp" alt="fotomia">
+			<h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				Nicolás Vannelli <a
+					href="https://www.linkedin.com/in/nicolas-vannelli-730ab018a/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"><Badge>
+					Disponible
+				</Badge></a>
+			</h1>
+			<h2 class="text-2xl text-wrap">Un apasionado desarrollador web con un enfoque centrado en la creación de experiencias digitales cautivadoras y funcionales. Con una sólida base en tecnologías front-end como HTML, CSS y JavaScript, junto con experiencia en el desarrollo de aplicaciones web utilizando React.</h2>
+
+			<nav class="flex flex-wrap gap-x-2 mt-6">
+				<RRSS
+					href="https://www.linkedin.com/in/nicolas-vannelli-730ab018a/"
+				>
+					<LinkedIn class="w-6 h-6" />
+					LinkedIn
+				</RRSS>
+				<RRSS href="https://github.com/NicolasVannelli">
+					<GitHub class="w-6 h-6" />
+					GitHub
+				</RRSS>
+				<RRSS href="mailto:Nicolas_Vannelli@hotmail.com">
+					<Mail class="w-6 h-6"/>
+					Nicolas_Vannelli@hotmail.com
+				</RRSS>
+			</nav>
+		</SectionContainer>
+		<SectionContainer>
+			<Sobremi id="SobreMi" class="size-7"/>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">Sobre mi</h2>
+			<h3 class="text-2xl text-wrap">Soy Nicolás, un Desarrollador Web entusiasta y dedicado con una pasión por crear experiencias digitales atractivas y funcionales. Estoy comprometido a ofrecer soluciones creativas y de alta calidad para satisfacer las necesidades de mis clientes y usuarios finales.
+			Me he capacitado en la plataforma de <strong>Coderhouse</strong> donde realicé dichos proyectos donde también busco seguir capacitandome, actualmente estoy realizando un curso sobre <strong>Back-end</strong></h3>
+		</SectionContainer>
+		<SectionContainer>
+			<Code class="size-7"/>
+			<h2 id="proyectos" class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">Proyectos</h2>
+			<Proyectos/>
+		</SectionContainer>
+
+	</main>
+	<footer>
+		<Footer/>
+	</footer>
+</Layout>
