@@ -5,6 +5,7 @@ import JavaScript from "../icons/JavaScript.astro";
 import GitHub from "../icons/GitHub.astro";
 import React from "../icons/React.astro";
 import Framework from "../icons/framework.astro";
+import Download from "../icons/download.astro";
 ---
 
 <main>
@@ -40,6 +41,7 @@ import Framework from "../icons/framework.astro";
                 <p>Empatico</p>
             </div>
         </section>
+        <a href="../CV.pdf" download="CV.pdf">Descarga mi CV<Download/></a>
     </div>
 </main>
 
@@ -87,5 +89,11 @@ import Framework from "../icons/framework.astro";
     }
     h4{
         font-size: 1.25rem;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        border: 2px solid currentColor;
+        padding: 16px 32px;
     }
 </style>
