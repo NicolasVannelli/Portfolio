@@ -1,0 +1,63 @@
+---
+import LinkedIn from "../icons/LinkedIn.astro"
+import Correo from "../icons/Correo.astro"
+import GitHub from "../icons/GitHub.astro"
+---
+
+<div class="inicio">
+    <h2>Hello World</h2>
+    <h1>Nicolás Vannelli</h1>
+    <h2>Front End Developer</h2>
+    <a href="#sobremi" class="sobremi">Sobre Mi</a>
+    <nav>
+        <a href="https://www.linkedin.com/in/nicolas-vannelli-730ab018a/" rel="noopener" target="_blank"aria-label="LinkedIn"><LinkedIn class="linkedIn"/></a>
+        <a href="https://github.com/NicolasVannelli" rel="noopener" target="_blank" aria-label="GitHub" ><GitHub class="gitHub"/></a>
+        <a href="mailto:Nicolas_Vannelli@hotmail.com"aria-label="miCorreo"><Correo class="correo"/></a>
+    </nav>
+</div>
+
+<style>
+    .inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .sobremi{
+        border: 5px solid black;
+        padding: 32px;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        margin: 50px;
+    }
+    nav{
+        display: flex;
+    }
+    .linkedIn:hover{
+        color:#126bc4;
+        transition: 0.5s;
+        box-shadow: 0px 0px 15px 0px #126bc4 ;
+        transform: scale(1.2);
+    }
+    .gitHub{
+        border-radius: 50%;
+    }
+    .gitHub:hover{
+        color:#ffb308;
+        background-color: #243642;
+        transition: 0.5s;
+        box-shadow: 0px 0px 15px 10px #ffb308 ;
+        transform: scale(1.2);
+    }
+    .correo:hover{
+        transition: 0.5s;
+        transform: scale(1.5);
+    }
+</style>

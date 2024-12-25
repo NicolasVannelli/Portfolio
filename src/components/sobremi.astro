@@ -1,0 +1,91 @@
+---
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import GitHub from "../icons/GitHub.astro";
+import React from "../icons/React.astro";
+import Framework from "../icons/framework.astro";
+---
+
+<main>
+    <h2 id="sobremi">Sobre mi</h2>
+    <div>
+        <img src="../Yo.webp" alt="">
+        <p class="sobreMi">
+            Soy Nicolás, un Desarrollador Web entusiasta y dedicado con una
+            pasión por crear experiencias digitales atractivas y funcionales.
+            Estoy comprometido a ofrecer soluciones creativas y de alta calidad
+            para satisfacer las necesidades de mis clientes y usuarios finales.
+            Me he capacitado en la plataforma de <strong>Coderhouse</strong> donde
+            realicé dichos proyectos donde también busco seguir capacitandome.
+        </p>
+        <h3>Habilidades</h3>
+        <section>
+            <div class="habilidades">
+                <h4>Habilidades tecnicas</h4>
+                <p><HTML /></p>
+                <p><CSS /></p>
+                <p><JavaScript /></p>
+                <p><React /></p>
+                <p><Framework /></p>
+                <p><GitHub /></p>
+            </div>
+            <div class="habilidades">
+                <h4>Habilidades Blandas</h4>
+                <p>Trabajo en equipo</p>
+                <p>Comuniación</p>
+                <p>Adaptabilidad</p>
+                <p>Resolución de problemas</p>
+                <p>Proactivo</p>
+                <p>Empatico</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        shape-outside: ellipse(130px 140px at 20% 20%);
+        margin-right: 20px;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+    .sobreMi {
+        width: 500px;
+        margin-bottom: 50px;
+        height: auto;
+        text-align: center;
+    }
+    section {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .habilidades {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        align-items: center;
+        margin-right: 32px;
+    }
+    p {
+        height: 50px;
+    }
+    h4{
+        font-size: 1.25rem;
+    }
+</style>

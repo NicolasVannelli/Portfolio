@@ -1,0 +1,114 @@
+---
+import Code from "../icons/Code.astro"
+import JavaScript from "../icons/JavaScript.astro";
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import React from "../icons/React.astro";
+import GitHub from "../icons/GitHub.astro";
+
+const TAGS = {
+    HTML: {
+        icon: HTML,
+    },
+    CSS: {
+        icon: CSS,
+    },
+    React: {
+        icon: React,
+    },
+    JavaScript: {
+        icon: JavaScript,
+    },
+};
+
+const PROYECTOS = [
+    {
+        title: "Página de práctica ",
+        description:
+            'Este proyecto es una página web completamente responsive diseñada con HTML y CSS, donde integré una funcionalidad de cambio entre los modos "Oscuro" y "Claro" utilizando JavaScript. El enfoque estuvo en la accesibilidad y la experiencia del usuario, asegurando una navegación fluida en dispositivos de distintos tamaños y proporcionando opciones de personalización visual.',
+        link: "https://nicolasvannelli.github.io/Simple-Homepage/",
+        github: "https://github.com/NicolasVannelli/PaginaYone",
+        image: "../Pagina1.webp",
+        tags: [TAGS.HTML, TAGS.CSS,TAGS.JavaScript],
+    },
+    {
+        title: "Patient Data",
+        description:
+            "Este proyecto es una aplicación web diseñada para gestionar información de pacientes, donde puse a prueba mis habilidades en desarrollo frontend utilizando JavaScript. Implementé funciones como agregar, filtrar, eliminar y visualizar pacientes, integrando el uso de manipulación del DOM, asincronías, consumo de APIs, y manejo de eventos. Además, aproveché librerías para optimizar la experiencia del usuario y crear una interfaz interactiva e intuitiva",
+        link: "https://patientsdata.netlify.app/",
+        github: "https://github.com/NicolasVannelli/PatientData",
+        image: "../pagina2.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+    },
+    {
+        title: "E-commerce",
+        description:
+            "Este proyecto es una plataforma de e-commerce diseñada con React, donde enfrenté el desafío de aprender y dominar este framework. Implementé hooks, consumo de APIs y la conexión a una base de datos para gestionar la información de productos, stock y detalles de cada artículo. El objetivo fue crear una aplicación funcional, dinámica y escalable, que ofrece una experiencia de usuario intuitiva para explorar y adquirir productos de hardware.",
+        link: "https://nicohardware.netlify.app/",
+        github: "https://github.com/NicolasVannelli/Tiendita",
+        image: "../pagina3.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.React],
+    },
+    {
+        title: "Formulario de registro",
+        description:
+            "Implementación de un formulario de registro de tres pasos utilizando JavaScript para manipular el DOM y validar los datos del usuario. Diseño responsivo y experiencia de usuario optimizada.",
+        link: "https://nicolasvannelli.github.io/Multi-step-Register-form/",
+        github: "https://github.com/NicolasVannelli/Multi-step-Register-form",
+        image: "../pagina4.webp",
+        tags: [TAGS.HTML, TAGS.CSS,TAGS.JavaScript],
+    },
+];
+---
+<h3 id="proyectos"><Code/>Proyectos<h3/>
+{
+    PROYECTOS.map(({ title, description, tags, image, link, github }) => (
+        <article>
+            <a href={link} target="_blank" rel="noopener"><img src={image} alt="Captura de pantalla de mi proyecto"/></a>
+            <h3>
+                {title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <a href={github} target="_blank" rel="noopener"><GitHub/></a>
+            <ul>
+                {tags.map((tag) => (
+                    <li>
+                            <tag.icon/>
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}
+
+<style>
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    p{
+        width: 80%;
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        border: 1px solid #fff;
+        margin: 20px;
+        width: 50%;
+    }
+    img{
+        width: 100%;
+        height: 350px;
+    }
+    img:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+    ul{
+        display: flex;
+        gap: 1rem;
+    }
+</style>
