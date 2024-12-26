@@ -29,25 +29,4 @@ import Arrow from "../icons/arrow.astro";
         visibility: visible;
     }
 </style>
- <script>
-    const scrollTopButton = document.getElementById('scrollTopButton');
-
-// Mostrar el botón al pasar cierta altura
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 800) { // Ajusta la altura según lo necesites
-    scrollTopButton.classList.remove('hidden');
-    scrollTopButton.classList.add('visible');
-  } else {
-    scrollTopButton.classList.remove('visible');
-    scrollTopButton.classList.add('hidden');
-  }
-});
-
-// Función para volver al inicio
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
- </script>
+<script src="../assets/scroll.js"></script>
